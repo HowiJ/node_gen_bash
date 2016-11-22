@@ -13,6 +13,6 @@ This is a node server generator that runs off of a bash script. It will generate
 
 ### Notes:
 1. Make sure mongod is running.
-2. MongoDB is currently required in this version (unless you manually remove it in your files of course).
+2. MongoDB is currently required in this version (unless you manually remove it in created files of course).
 
 ###### Made By: <i>Howard Jiang</i>
