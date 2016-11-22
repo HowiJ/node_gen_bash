@@ -11,4 +11,8 @@ This is a node server generator that runs off of a bash script. It will generate
 5. Inside that project folder, use npm install!
 6. Run the server (main file is server.js)
 
+### Notes:
+1. Make sure mongod is running.
+2. MongoDB is currently required in this version (unless you manually remove it in your files of course).
+
 ###### Made By: <i>Howard Jiang</i>
