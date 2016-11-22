@@ -24,8 +24,7 @@ if [ -d "$folder_name" ]; then
     echo "Folder already exists. Please delete it or use another name"
     # echo "Folder $folder_name exists, do you wish to delete it and re-make it? (yes / no)"
     # read delete_folder
-    rm -r $folder_name
-# else
+else
     #  /==================================================  #
     # /=--------------------------------------------------= #
     # =----------------------------------------------------= #
