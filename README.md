@@ -9,6 +9,7 @@ This is a node server generator that runs off of a bash script. It will generate
 2. Use chmod to allow access and ability to run the script.
  * chmod +x scriptfile.sh works (just need to make the script executable)
 3. Run the script.
+ * Use folderdirectory/script.sh (IE: ./nodegen.sh)
  * If you want, set an alias for the script.
 4. After answering the questions, you'll have a new project folder.
  * DB Name will be the name of the database
