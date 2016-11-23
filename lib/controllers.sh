@@ -40,8 +40,8 @@ ctrl () {
         echo '            '"})" >> $fp$fname
         echo '        '"}," >> $fp$fname
         echo '        '"create: (req, res) => {" >> $fp$fname
-        echo '            '"const ${model_names[$i],,} = new ${model_names[$i]}(req.body);" >> $fp$fname
-        echo '            '"${model_names[$i],,}.save((err) => {" >> $fp$fname
+        echo '            '"const new_${model_names[$i],,} = new ${model_names[$i]}(req.body);" >> $fp$fname
+        echo '            '"new_${model_names[$i],,}.save((err) => {" >> $fp$fname
         echo '                '"if (err) { console.log(err); res.json(err); } else {" >> $fp$fname
         echo '                    '"res.redirect('/${model_names[$i],,}s');" >> $fp$fname
         echo '                '"}" >> $fp$fname
