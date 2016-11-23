@@ -12,14 +12,15 @@ This is a node server generator that runs off of a bash script. It will generate
  * If you want, set an alias for the script.
 4. After answering the questions, you'll have a new project folder.
  * DB Name will be the name of the database
- * Model Name is the name of the model (IE Users). Note: no validations are in so best is to use capital first letter
+ * Model Name is the name of the model (IE: Users). Note: no validations are in so best is to use capital first letter
  * Attribute name is attributes of the model such as name, age, etc.
  * Attribute type is the type of the attribute such as String, Number, Array, etc.
 5. Inside that project folder, use npm install!
 6. Run the server (main file is server.js)
 
 ### Notes:
-1. Make sure mongod is running.
-2. MongoDB is currently required in this version (unless you manually remove it in the created files of course).
+* Make sure mongod is running.
+* MongoDB is currently required in this version (unless you manually remove it in the created files of course).
+* nodegen.sh && nodegen_clean.sh should have the same functionality. 
 
 ###### Made By: <i>Howard Jiang</i>
