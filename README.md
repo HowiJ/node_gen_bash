@@ -1,7 +1,7 @@
 Node Generator.sh
 ===============
 ### Description:
-This is a node server generator that runs off of a bash script. It will generate a fully modularized back end code base with basic CRUD operations.
+This is a node server generator built as a bash script. It will generate a fully modularized Node based back-end codebase with basic CRUD operations.
 
 ### Usage:
 1. Change the top line (#! /Users/Howi/bin/bash) to your bash location.
