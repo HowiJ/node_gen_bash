@@ -3,41 +3,46 @@
 
 declare pwd
 declare folder_name
-
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 pwd=`pwd`
-
+echo $SOURCE
 # All of the other files that we use for file creation
-source "$pwd/lib/package.sh"
-source "$pwd/lib/settings.sh"
-source "$pwd/lib/server.sh"
-source "$pwd/lib/mongoose.sh"
-source "$pwd/lib/model.sh"
-source "$pwd/lib/routes.sh"
-source "$pwd/lib/controllers.sh"
+source "$DIR/lib/package.sh"
+source "$DIR/lib/settings.sh"
+source "$DIR/lib/server.sh"
+source "$DIR/lib/mongoose.sh"
+source "$DIR/lib/model.sh"
+source "$DIR/lib/routes.sh"
+source "$DIR/lib/controllers.sh"
+
+# Colors
+declare NC='\033[0m'
+declare RED='\033[0;31m'
+declare GREEN='\033[0;32m'
+declare PURPLE='\033[0;35m'
+declare CYAN='\033[0;36m'
+declare GRAY='\033[1;30m'
 
 function main() {
     # Check if the folder exists or not
     if [ -d "$folder_name" ]; then
         # Folder exists
-        echo "Folder already exists. Please delete it or use another name"
+        echo -e "${RED}ERR: Folder already exists. Please delete it or use another name"
     else
         # ----- Initializing -----
-        echo "Making project: $folder_name"
-        mkdir "$folder_name"
-        # Change into that directory
-        cd $folder_name
         # Port Number & Database Name
         echo "_______________________________________"
         printf "Port (8000): "
         read port
         if [ -z $port ]; then
+            echo -e "${RED}WARN: Port defaulted to 8000.${NC}"
             port=8000
         fi
         printf "DB Name: "
         read db_name
 
         while [ -z $db_name ]; do
-            echo "DB Name cannot be empty or null."
+            echo -e "${RED}ERR: DB Name cannot be empty or null.${NC}"
             printf "DB Name: "
             read db_name
         done
@@ -62,7 +67,7 @@ function main() {
                 while [ ! "$attr_name" == "-1" ]; do
                     # Keep querying while it's empty'
                     while [ -z "$attr_name" ]; do
-                        echo "Attribute name cannot be empty or null."
+                        echo -e "${RED}ERR: Attribute name cannot be empty or null.${NC}"
                         printf "Attribute Name (-1 to exit): "
                         read attr_name
                     done
@@ -71,14 +76,14 @@ function main() {
                     printf "Attribute Type: "
                     read attr_type
                     while [ -z "$attr_type" ]; do
-                        echo "Attribute type cannot be empty or null."
+                        echo -e "${RED}Attribute type cannot be empty or null.${NC}"
                         printf "Attribute Type: "
                         read attr_type
                     done
                     models+=("$attr_type")
                     echo ""
                     # Ask for Model Name
-                    printf "Attribute Name (-1 to exit): "
+                    printf "Attribute Name (-1 to exit):"
                     read attr_name
                 done
                 # We're finished with the current model so we add an ending char
@@ -86,7 +91,7 @@ function main() {
                 echo "_______________________________________"
             else
                 # If model name is empty or null
-                echo "model_name cannot be empty or null."
+                echo -e "${RED} ERR: model_name cannot be empty or null.${NC}"
             fi
             # Query for the name
             printf "Please enter model name (-1 to exit): "
@@ -98,6 +103,12 @@ function main() {
         # =----------------------------------------------------= #
         #                   Structure Creation                   #
         # ====================================================== #
+        ## Create the project Folder
+        echo -e "Making project: ${GRAY}$folder_name${NC}"
+        mkdir "$folder_name"
+        # Change into that directory
+        cd $folder_name
+        
         # Structure Creation
         touch server.js
         mkdir client
@@ -135,9 +146,14 @@ function main() {
 #                    Setup Variables                     #
 # ====================================================== #
 # If folder exists, lets delete it.
-echo "--- Generator ---"
+echo "--- Node Server Generator ---"
 printf "Folder Name: "
 
 read folder_name
+while [ -z "$folder_name" ]; do
+    echo -e "${RED}ERR: Folder Name cannot be empty or null.${NC}"
+    printf "Folder Name: "
+    read folder_name
+done
 
 main

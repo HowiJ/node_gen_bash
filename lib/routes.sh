@@ -25,8 +25,10 @@ rout () {
     done
     echo "" >> "$curr_path"
     echo "module.exports = (app) => {" >> "$curr_path"
+    echo '    '"// This route is just for the default welcome page." >> "$curr_path"
     echo '    '"app.get('/', (req, res) => {" >> "$curr_path"
-    echo '          '"res.send('<h1>hello $folder_name</h1>')" >> "$curr_path"
+    echo '        '"// Default Welcome Message." >> "$curr_path"
+    echo '        '"res.send('<h1>Hey there!</h1><h3>Project: $folder_name</h3><h4>A few things to know....</h4><ul><li>Your server is up and running...</li><li>Routes are restful and set up...</li><li>Controllers are set up per model...</li></ul><p><i>Made by Howard Jiang (github.com/HowiJ/node_gen_bash)</i></p>')" >> "$curr_path"
     echo '    '"})" >> "$curr_path"
     for i in "${!model_names[@]}"; do
         echo "" >> "$curr_path"
