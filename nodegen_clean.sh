@@ -61,6 +61,8 @@ function main() {
             if [ ! -z "$model_name" ]; then
                 # Add Model Name to Array
                 models+=("$model_name")
+                # New Line for each attr
+                echo ""
                 # Read Attribute Name
                 printf "Attribute Name (-1 to exit): "
                 read attr_name
@@ -85,6 +87,8 @@ function main() {
                     # Ask for Model Name
                     printf "Attribute Name (-1 to exit):"
                     read attr_name
+                    # New Line for each attr
+                    echo ""
                 done
                 # We're finished with the current model so we add an ending char
                 models+=(0)
@@ -108,7 +112,7 @@ function main() {
         mkdir "$folder_name"
         # Change into that directory
         cd $folder_name
-        
+
         # Structure Creation
         touch server.js
         mkdir client
