@@ -1,4 +1,4 @@
-#! /Users/Howi/bin/bash
+#! /bin/bash
 # Makes package.json
 
 declare pwd
