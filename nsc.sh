@@ -24,6 +24,7 @@ declare CYAN='\033[0;36m'
 declare GRAY='\033[1;30m'
 
 function main() {
+    echo $1
     # Check if the folder exists or not
     if [ -d "$folder_name" ]; then
         # Folder exists
@@ -33,7 +34,13 @@ function main() {
         # Port Number & Database Name
         echo "_______________________________________"
         printf "Port (8000): "
-        read port
+        if [ ! -z $1 ]; then
+            port=$1
+            echo "$port"
+        else
+            echo "NONE"
+            read port
+        fi
         if [ -z $port ]; then
             echo -e "${RED}WARN: Port defaulted to 8000.${NC}"
             port=8000
@@ -164,5 +171,6 @@ while [ -z "$folder_name" ]; do
     printf "Folder Name: "
     read folder_name
 done
+# echo $2
 
-main
+main $2

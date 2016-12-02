@@ -1,4 +1,4 @@
-Node Generator.sh
+Node Generator .sh (nsc.sh)
 ===============
 ### Description:
 This is a node server generator built as a bash script. It will generate a fully modularized Node based back-end codebase with basic CRUD operations.
@@ -8,8 +8,10 @@ This is a node server generator built as a bash script. It will generate a fully
  * Use which bash to find out your path.
 2. Use chmod to allow access and ability to run the script.
  * chmod +x scriptfile.sh works (just need to make the script executable)
-3. Run the script.
- * Use folderdirectory/script.sh (IE: ./nodegen.sh)
+3. Run the script. (If you have something after the script, it will take it as the folder name)
+ * Use folderdirectory/script.sh 
+  * (IE: ./nsc.sh) 
+  * (IE: ./nsc.sh foldername)
  * If you want, set an alias for the script.
 4. After answering the questions, you'll have a new project folder.
  * DB Name will be the name of the database
@@ -22,6 +24,10 @@ This is a node server generator built as a bash script. It will generate a fully
 ### Notes:
 * Make sure mongod is running.
 * MongoDB is currently required in this version (unless you manually remove it in the created files of course).
-* nodegen.sh && nodegen_clean.sh should have the same functionality. 
+* nsc.sh && nsc_clean.sh should have the same functionality. 
+
+### Commands:
+./nsc_clean.sh <foldername> <port>
+* the foldername and port are optional since it will ask you if you dont have it. 
 
 ###### Made By: <i>Howard Jiang</i>
