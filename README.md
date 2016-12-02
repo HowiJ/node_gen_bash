@@ -5,7 +5,7 @@ This is a node server generator built as a bash script. It will generate a fully
 
 ### Usage:
 1. Change the top line (#! /Users/Howi/bin/bash) to your bash location.
- * Use which bash to find out your path.
+ * Use `which bash` to find out your path.
 2. Use chmod to allow access and ability to run the script.
  * `chmod +x nsc.sh` works (just need to make the script executable)
 3. Run the script. (If you have something after the script, it will take it as the folder name)
