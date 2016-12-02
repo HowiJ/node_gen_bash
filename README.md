@@ -27,7 +27,7 @@ This is a node server generator built as a bash script. It will generate a fully
 * nsc.sh && nsc_clean.sh should have the same functionality. 
 
 ### Commands:
-./nsc_clean.sh <foldername> <port>
+./nsc_clean.sh `<foldername>` <port>
 * the foldername and port are optional since it will ask you if you dont have it. 
 
 ###### Made By: <i>Howard Jiang</i>

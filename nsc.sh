@@ -24,12 +24,6 @@ declare CYAN='\033[0;36m'
 declare GRAY='\033[1;30m'
 
 function main() {
-    echo $1
-    # Check if the folder exists or not
-    if [ -d "$folder_name" ]; then
-        # Folder exists
-        echo -e "${RED}ERR: Folder already exists. Please delete it or use another name"
-    else
         # ----- Initializing -----
         # Port Number & Database Name
         echo "_______________________________________"
@@ -148,7 +142,6 @@ function main() {
         rout "${model_names[@]}"
         # Controller Function 
         ctrl "${model_names[@]}"
-    fi
 }
 
 #  /==================================================  #
@@ -173,4 +166,10 @@ while [ -z "$folder_name" ]; do
 done
 # echo $2
 
-main $2
+# Check if the folder exists or not
+if [ -d "$folder_name" ]; then
+    # Folder exists
+    echo -e "${RED}ERR: Folder already exists. Please delete it or use another name"
+else
+    main $2
+fi
