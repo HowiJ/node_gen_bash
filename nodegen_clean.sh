@@ -152,8 +152,13 @@ function main() {
 # If folder exists, lets delete it.
 echo "--- Node Server Generator ---"
 printf "Folder Name: "
+if [ ! -z $1 ]; then
+    folder_name=$1
+    echo $folder_name
+else
+    read folder_name
+fi
 
-read folder_name
 while [ -z "$folder_name" ]; do
     echo -e "${RED}ERR: Folder Name cannot be empty or null.${NC}"
     printf "Folder Name: "
