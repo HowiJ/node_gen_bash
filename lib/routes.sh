@@ -31,19 +31,49 @@ rout () {
     for i in "${!model_names[@]}"; do
         echo "" >> "$curr_path"
         echo '    '"//Start Model ${model_names[$i]}" >> "$curr_path"
+
+        # App Get (All)
+        if [ "${model_names[$i]: -1}" == "s" ]; then
+        echo '    '"app.get('/${model_names[$i],,}', (req, res) => {" >> "$curr_path"
+        else
         echo '    '"app.get('/${model_names[$i],,}s', (req, res) => {" >> "$curr_path"
+        fi
         echo '        '"${model_names[$i]}.index(req, res);" >> "$curr_path"
         echo '    '"})" >> "$curr_path"
+
+        # App Get (Show)
+        if [ "${model_names[$i]: -1}" == "s" ]; then
+        echo '    '"app.get('/${model_names[$i],,}/:id', (req, res) => {" >> "$curr_path"
+        else
         echo '    '"app.get('/${model_names[$i],,}s/:id', (req, res) => {" >> "$curr_path"
+        fi
         echo '        '"${model_names[$i]}.show(req, res);" >> "$curr_path"
         echo '    '"})" >> "$curr_path"
+
+        # App Post (Creation)
+        if [ "${model_names[$i]: -1}" == "s" ]; then
+        echo '    '"app.post('/${model_names[$i],,}', (req, res) => {" >> "$curr_path"
+        else
         echo '    '"app.post('/${model_names[$i],,}s', (req, res) => {" >> "$curr_path"
+        fi
         echo '        '"${model_names[$i]}.create(req, res);" >> "$curr_path"
         echo '    '"})" >> "$curr_path"
+
+        # App Put (Update)
+        if [ "${model_names[$i]: -1}" == "s" ]; then
+        echo '    '"app.put('/${model_names[$i],,}/:id', (req, res) => {" >> "$curr_path"
+        else
         echo '    '"app.put('/${model_names[$i],,}s/:id', (req, res) => {" >> "$curr_path"
+        fi
         echo '        '"${model_names[$i]}.update(req, res);" >> "$curr_path"
         echo '    '"})" >> "$curr_path"
+
+        # App Delete (Destroy)
+        if [ "${model_names[$i]: -1}" == "s" ]; then
+        echo '    '"app.delete('/${model_names[$i],,}/:id', (req, res) => {" >> "$curr_path"
+        else
         echo '    '"app.delete('/${model_names[$i],,}s/:id', (req, res) => {" >> "$curr_path"
+        fi
         echo '        '"${model_names[$i]}.destroy(req, res);" >> "$curr_path"
         echo '    '"})" >> "$curr_path"
         echo '    '"//End Model ${model_names[$i]}" >> "$curr_path"

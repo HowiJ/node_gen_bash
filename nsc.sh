@@ -86,8 +86,6 @@ function main() {
                 # Ask for Model Name
                 printf "Attribute Name (-1 to exit):"
                 read attr_name
-                # New Line for each attr
-                echo ""
             done
             # We're finished with the current model so we add an ending char
             models+=(0)
