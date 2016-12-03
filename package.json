@@ -1,6 +1,6 @@
 {
   "name": "nodesc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Creates a modularized node server with all of the basic CRUD operations and routes for specified models. (Uses MongoDB as the db)",
   "main": "index.js",
   "directories": {

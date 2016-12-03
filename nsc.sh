@@ -9,13 +9,21 @@ pwd -P
 echo $SOURCE
 # All of the other files that we use for file creation
 # Temporary fix, assumes that your node globals are in this location.
-source "/usr/local/lib/node_modules/nodesc/lib/package.sh"
-source "/usr/local/lib/node_modules/nodesc/lib/settings.sh"
-source "/usr/local/lib/node_modules/nodesc/lib/server.sh"
-source "/usr/local/lib/node_modules/nodesc/lib/mongoose.sh"
-source "/usr/local/lib/node_modules/nodesc/lib/model.sh"
-source "/usr/local/lib/node_modules/nodesc/lib/routes.sh"
-source "/usr/local/lib/node_modules/nodesc/lib/controllers.sh"
+# source "/usr/local/lib/node_modules/nodesc/lib/package.sh"
+# source "/usr/local/lib/node_modules/nodesc/lib/settings.sh"
+# source "/usr/local/lib/node_modules/nodesc/lib/server.sh"
+# source "/usr/local/lib/node_modules/nodesc/lib/mongoose.sh"
+# source "/usr/local/lib/node_modules/nodesc/lib/model.sh"
+# source "/usr/local/lib/node_modules/nodesc/lib/routes.sh"
+# source "/usr/local/lib/node_modules/nodesc/lib/controllers.sh"
+
+source "./lib/package.sh"
+source "./lib/settings.sh"
+source "./lib/server.sh"
+source "./lib/mongoose.sh"
+source "./lib/model.sh"
+source "./lib/routes.sh"
+source "./lib/controllers.sh"
 
 # Colors
 declare NC='\033[0m'
