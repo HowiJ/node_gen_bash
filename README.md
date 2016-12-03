@@ -12,9 +12,9 @@ Currently only supports MongoDB as the database.
  * `chmod +x nsc.sh` works (just need to make the script executable)
 2. Run the script. (If you have something after the script, it will take it as the folder name)
  * Use folderdirectory/script.sh 
-  * (IE: `./nsc.sh`) 
-  * (IE: `./nsc.sh foldername`)
-  * (IE: `./nsc.sh foldername portnumber`)
+  * (IE: `nsc`) 
+  * (IE: `nsc foldername`)
+  * (IE: `nsc foldername portnumber`)
  * If you want, set an alias for the script.
 3. After answering the questions, you'll have a new project folder.
  * DB Name will be the name of the database
