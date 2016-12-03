@@ -1,17 +1,17 @@
 {
   "name": "nodesc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Creates a modularized node server with all of the basic CRUD operations and routes for specified models. (Uses MongoDB as the db)",
   "main": "index.js",
   "directories": {
     "example": "example"
   },
   "scripts": {
-    "run": "./nsc.sh"
+    "run": "echo \"Use npm install -g and then the commands to use.\""
   },
   "bin": {
-    "nsc": "./nsc.sh",
-    "nodesc": "./nsc.sh"
+    "nsc": "./nodesc.sh",
+    "nodesc": "./nodesc.sh"
   },
   "repository": {
     "type": "git",

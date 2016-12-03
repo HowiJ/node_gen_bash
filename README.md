@@ -8,9 +8,7 @@ Currently only supports MongoDB as the database.
 * `npm install -g nodesc`
 
 ### Usage:
-1. Use chmod to allow access and ability to run the script.
- * `chmod +x nsc.sh` works (just need to make the script executable)
-2. Run the script. (If you have something after the script, it will take it as the folder name)
+1. Run the script. (If you have something after the script, it will take it as the folder name)
  * Use folderdirectory/script.sh 
   * (IE: `nsc`) 
   * (IE: `nsc foldername`)
@@ -30,11 +28,26 @@ Currently only supports MongoDB as the database.
 * nsc.sh && nsc_clean.sh should have the same functionality. 
 * You might need to change the top line (#! /bin/bash) to your bash location if it doesn't work.
  * Use `which bash` to find out your path.
+* If you wish to use the script directly, you might have to use chmod to allow access and ability to run the script.
+ * `chmod +x nsc.sh` works (just need to make the script executable)
 
 ### Commands:
 `nsc <foldername> <port>`
 `nodesc <foldername> <port>`
 * the foldername and port are optional since it will ask you if you dont have it.
 
+### Resources:
+Npm     : https://www.npmjs.com/package/nodesc
+Github  : https://github.com/HowiJ/node_gen_bash
+
 
 ###### Made By: <i>Howard Jiang</i>
+
+ 
+
+Copyright (c) 2004-2010 by Internet Systems Consortium, Inc. ("ISC") 
+Copyright (c) 1995-2003 by Internet Software Consortium
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND ISC DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL ISC BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.

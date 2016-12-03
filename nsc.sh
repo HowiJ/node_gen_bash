@@ -6,13 +6,13 @@ declare folder_name
 
 parent_path=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
 
-source "$parent_path/lib/package.sh"
-source "$parent_path/lib/settings.sh"
-source "$parent_path/lib/server.sh"
-source "$parent_path/lib/mongoose.sh"
-source "$parent_path/lib/model.sh"
-source "$parent_path/lib/routes.sh"
-source "$parent_path/lib/controllers.sh"
+source "$parent_path/nodesc/lib/package.sh"
+source "$parent_path/nodesc/lib/settings.sh"
+source "$parent_path/nodesc/lib/server.sh"
+source "$parent_path/nodesc/lib/mongoose.sh"
+source "$parent_path/nodesc/lib/model.sh"
+source "$parent_path/nodesc/lib/routes.sh"
+source "$parent_path/nodesc/lib/controllers.sh"
 
 # Colors
 declare NC='\033[0m'
