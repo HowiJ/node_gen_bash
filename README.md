@@ -33,6 +33,7 @@ Currently only supports MongoDB as the database.
 
 ### Commands:
 `nsc <foldername> <port>`
+        - or - 
 `nodesc <foldername> <port>`
 * the foldername and port are optional since it will ask you if you dont have it.
 
