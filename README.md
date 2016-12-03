@@ -32,13 +32,13 @@ Currently only supports MongoDB as the database.
  * `chmod +x nsc.sh` works (just need to make the script executable)
 
 ### Commands:
-`nsc <foldername> <port>`
+`nsc <foldername> <port>`__
         - or - 
-`nodesc <foldername> <port>`
+`nodesc <foldername> <port>`__
 * the foldername and port are optional since it will ask you if you dont have it.
 
 ### Resources:
-Npm     : https://www.npmjs.com/package/nodesc
+Npm     : https://www.npmjs.com/package/nodesc __
 Github  : https://github.com/HowiJ/node_gen_bash
 
 
