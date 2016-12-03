@@ -17,13 +17,13 @@ echo $SOURCE
 # source "/usr/local/lib/node_modules/nodesc/lib/routes.sh"
 # source "/usr/local/lib/node_modules/nodesc/lib/controllers.sh"
 
-source "./lib/package.sh"
-source "./lib/settings.sh"
-source "./lib/server.sh"
-source "./lib/mongoose.sh"
-source "./lib/model.sh"
-source "./lib/routes.sh"
-source "./lib/controllers.sh"
+source ./lib/package.sh
+source ./lib/settings.sh
+source ./lib/server.sh
+source ./lib/mongoose.sh
+source ./lib/model.sh
+source ./lib/routes.sh
+source ./lib/controllers.sh
 
 # Colors
 declare NC='\033[0m'
