@@ -1,0 +1,33 @@
+{
+  "name": "nodesc",
+  "version": "1.0.1",
+  "description": "Creates a modularized node server with all of the basic CRUD operations and routes for specified models. (Uses MongoDB as the db)",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "run": "./nsc.sh"
+  },
+  "bin": {
+    "nsc": "./nsc.sh",
+    "nodesc": "./nsc.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HowiJ/node_gen_bash.git"
+  },
+  "keywords": [
+    "node",
+    "generator",
+    "creator",
+    "mongodb",
+    "mongo"
+  ],
+  "author": "Howard Jiang <me@howardjiang.com> (http://howardjiang.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HowiJ/node_gen_bash/issues"
+  },
+  "homepage": "https://github.com/HowiJ/node_gen_bash#readme"
+}

@@ -7,13 +7,13 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 pwd=`pwd`
 echo $SOURCE
 # All of the other files that we use for file creation
-source "$DIR/lib/package.sh"
-source "$DIR/lib/settings.sh"
-source "$DIR/lib/server.sh"
-source "$DIR/lib/mongoose.sh"
-source "$DIR/lib/model.sh"
-source "$DIR/lib/routes.sh"
-source "$DIR/lib/controllers.sh"
+source "lib/package.sh"
+source "lib/settings.sh"
+source "lib/server.sh"
+source "lib/mongoose.sh"
+source "lib/model.sh"
+source "lib/routes.sh"
+source "lib/controllers.sh"
 
 # Colors
 declare NC='\033[0m'
