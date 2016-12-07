@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/local/bin/bash
 # Makes package.json
 
 declare folder_name
@@ -429,6 +429,8 @@ function main() {
 #                    Setup Variables                     #
 # ====================================================== #
 # If folder exists, lets delete it.
+declare tester="HELLO"
+echo ${tester,,}
 echo "--- Node Server Generator ---"
 printf "Folder Name: "
 if [ ! -z $1 ]; then

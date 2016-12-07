@@ -5,6 +5,7 @@
 # ====================================================== #
 model () {
     declare -a models=("$@")
+    declare fname
     fp="./server/models/"
 
     mode=0
@@ -16,7 +17,7 @@ model () {
             # echo $mname
             echo "const mongoose        = require('mongoose');" >> $fp$fname".js"
             echo "const Schema          = mongoose.Schema;" >> $fp$fname".js"
-            echo "" >> $fp$fname".js"
+            echo "" >> $fp${fname,,}".js"
             echo "const ${mname}Schema  = new Schema({" >> $fp$fname".js"
             model_names+=($mname)
         elif [ "${models[$i]}" == "0" ]; then

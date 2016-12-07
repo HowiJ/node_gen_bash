@@ -15,7 +15,7 @@ ctrl () {
     echo $curr_path
     # -------------------- File Contents Below -------------------- #
     for i in ${!model_names[@]}; do
-        fname="${model_names[$i]}.js"
+        fname="${model_names[$i],,}.js"
         echo $fp$fname
         echo "'use strict';" >> $fp$fname
         echo "const mongoose = require('mongoose');" >> $fp$fname
